@@ -3,10 +3,10 @@
 @import "_vars.sass"
 
 body
-    fpnt-size: 14px
+    font-size: 14px
     min-width: 320px
     position: relative
-    line-heigth: 1.6
+    line-height: 1.6
     font-family: "Montserrat-ExtraLight", montserrat
     overflow-x: hidden
     color: #222
@@ -17,13 +17,14 @@ h1, h2, h3, h4, h5, h6
 
 a
     display: inline-block
+    text-decoration: none
 
 .hidden
     display: none
 
 .main-head
     background: #1D1D1D
-    min-heigth: 100vh
+    min-height: 100vh
     
 .menu-line
     padding: 0
@@ -31,7 +32,6 @@ a
     
 .top-menu
     text-align: center
-    
     > ul
         display: inline-block
         margin: 0
@@ -54,7 +54,7 @@ a
                     color: #000
                 
 #logo-D
-    postion: absolute
+    position: relative
     top: 0px
     background: #000
     line-height: 100%
@@ -66,4 +66,66 @@ a
         color: #fff
     
 .logo
-    display: block
+    display: block 
+    height: 210px
+    img
+        height: 100%
+
+.header-flex
+    display: flex
+    height: 100%
+    position: relative
+    top: 0
+    color: #f0f0f0
+
+.flex-center
+    margin: auto
+    
+.header-composition
+    text-align: center
+    position: relative
+    h1        
+        margin-bottom: 0px
+    h5
+        margin-top: 0px
+        
+.header-button
+	display: inline-block
+	border: 1px solid
+	color: #fff
+	text-decoration: none
+	background-color: #1D1D1D
+	padding: 15px 45px
+	font-size: 13px
+	text-transform: uppercase
+	font-weight: 600
+	letter-spacing: 3px
+	border-radius: 2px
+	text-align: center
+	position: relative
+	outline: none
+	transition: background-color .1s ease
+	&::after
+		transition: background-color .2s ease
+		position: absolute
+		content: ''
+		height: 4px
+		bottom: 0
+		width: 100%
+		background-color: darken($accent, 50%)
+		opacity: .18
+		border-bottom-left-radius: 2px
+		border-bottom-right-radius: 2px
+		left: 0
+	&:focus, &:hover
+		text-decoration: none
+		color: #fff
+	&:hover
+		background-color: lighten($accent, 5%)
+		&::after
+			opacity: .22
+	&:active
+		background-color: darken($accent, 5%)
+		&::after
+			opacity: .32
+    
